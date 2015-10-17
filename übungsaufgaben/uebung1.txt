@@ -1,0 +1,10 @@
+1. Erstellen sie ein Flussdiagramm, das zu fünf Zahlen folgende Informationen berechnet:
+  - Minimum der fünf Zahlen,
+  - Maximum der fünf Zahlen,
+  - Durchschnitt der fünf Zahlen,
+  - Summe der fünf Zahlen.
+
+2. Modifizieren Sie das Programm aus der Vorlesung so das:
+  - die Summe von 1 bis 5 berechnet wird. WICHTIG: Sie dürfen nur die Zeile mit dem while verändern,
+  - das Produkt von 1 bis 10 berechnet wird,
+  - bei der Summe- bzw. Produktbildung die Zwischenergebnisse auch mit auf dem Bildschirm ausgegeben werden.  
