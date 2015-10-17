@@ -1,2 +1,2 @@
 # prog1
-Hier kommen alle Programmieren 1 Übungen rein der Hochschule Bremerhaven rein!
+Hier kommen alle Programmieren 1 Übungen der Hochschule Bremerhaven rein!
