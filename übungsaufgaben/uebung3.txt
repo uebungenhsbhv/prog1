@@ -1,0 +1,10 @@
+1. Zeichnen Sie ein Flussdiagramm, das zu zwei eingegebenen Zahlen den größten gemeinsamen Teiler (GGT) ermittelt.
+
+2. Schreiben Sie ein Programm mit Namen Life, dass die folgende Ausgabe produziert:
+  X_X_X_X_X_X
+  X__X__X__X_
+  X___X___X__
+  X____X____X
+  X_____X____
+
+  Dabei soll die Anzahl der Zeilen und Spalten jeweils in einer int-Variable gespeichert sein. Testen Sie Ihr Programm mit unterschiedlichen Spalten und Zeilen.

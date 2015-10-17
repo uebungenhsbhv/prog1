@@ -1,0 +1,5 @@
+1. Zeichnen Sie ein Flussdiagramm, das zu einem Jahr ermittelt, ob es sich um ein Schaltjahr handelt oder nicht.
+
+2. Zeichnen Sie ein Flussdiagramm, das zu zwei Zeichenfolgen mit Maximal 20 Zeichenermittelt, welche der beiden Zeichenfolgen gemäß der lexikographischen Reihenfolge kleiner ist.
+
+3. Schreiben Sie ein Java Programm, das zeigt, dass die booleschen Operatoren in Java die DeMorganischen Gesetze erfüllen.
