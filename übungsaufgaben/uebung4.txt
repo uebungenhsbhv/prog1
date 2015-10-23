@@ -1,0 +1,9 @@
+- Verändern Sie ihr Life Programm, so dass zunächst ein zweidimensonales boolesches Array angelegt wird, das so groß ist, wie die Ausgabe sein soll.
+- Verwende Sie bei der Erzeugung des Arrays für die Größenangaben wieder die int-Variblen.
+- In einer Initialisierungsphase soll die Zellen des Arrays wie folgt beschrieben werden (T = true, F = false):
+  TFTFTFTFTFT
+  TFFTFFTFFTF
+  TFFFTFFFTFF
+  TFFFFTFFFFT
+  TFFFFFTFFFF
+- Geben Sie anschließend das Array auf dem Bildschirm aus. Dabei soll aus Ausgabe derart aussehen, wie im Programm aus Übung 3.
