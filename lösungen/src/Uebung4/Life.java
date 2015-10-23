@@ -12,9 +12,13 @@ public class Life {
 			for(j = 0; j < arr[i].length; ++j) {
 				if(j % m == 0) {
 					arr[i][j] = true;
-					System.out.print('X');
 				} else {
 					arr[i][j] = false;
+				}
+				
+				if(arr[i][j]) {
+					System.out.print('X');
+				} else {
 					System.out.print('_');
 				}
 			}
