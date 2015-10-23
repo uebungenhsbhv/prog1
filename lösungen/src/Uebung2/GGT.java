@@ -1,5 +1,3 @@
-package Uebung2;
-
 public class GGT {
 	public static void euklid(int a, int b) {
 		if(b == 0) {

@@ -1,5 +1,3 @@
-package Uebung1;
-
 public class schaltjahr{
 	
 	public static void main(String[] args) {

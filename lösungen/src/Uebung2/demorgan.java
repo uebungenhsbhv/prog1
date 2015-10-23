@@ -1,5 +1,3 @@
-package Uebung2;
-
 public class demorgan{
 	public static void main(String[] args) {
 		boolean a = true,
