@@ -1,3 +1,7 @@
+package uebung5;
+
+public class life {
+
 	public static void main(String[] args) {
 		int z=5,
 			s=11,
@@ -157,3 +161,4 @@
 			System.out.println();
 		}
 	}
+}
