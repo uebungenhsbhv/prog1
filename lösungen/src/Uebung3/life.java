@@ -1,5 +1,3 @@
-package mypackage;
-
 public class life {
 	public static void main(String[] args) {
 		int spalten = 11,

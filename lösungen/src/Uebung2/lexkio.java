@@ -1,5 +1,3 @@
-package mypackage;
-
 public class lexkio{
 	
 	public static void main(String[] args) {

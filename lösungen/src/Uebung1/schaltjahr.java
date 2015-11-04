@@ -1,5 +1,3 @@
-package mypackage;
-
 public class schaltjahr{
 	
 	public static void main(String[] args) {
