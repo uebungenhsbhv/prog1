@@ -1,5 +1,3 @@
-package uebung5;
-
 public class life {
 
 	public static void main(String[] args) {
