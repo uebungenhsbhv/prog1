@@ -1,0 +1,103 @@
+public class life {
+	public static void Init(boolean a[][]){
+		int m=2;
+		for(int i=0;i<a.length;++i){
+			for(int j=0;j<a[i].length;++j){
+				if(j%m==0){
+					a[i][j]=true;					
+				}else{
+					a[i][j]=false;
+				}	
+			}
+			m++;
+		}
+	}
+	
+	public static void Ausgabe(boolean a[][]){
+		for(int i = 0; i < a.length;++i){
+			for(int j = 0; j < a[i].length;++j){
+				if(a[i][j]==true){
+					System.out.print("X");
+				}else{
+					System.out.print("_");
+				}
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+	
+	public static void Neuberechnung(boolean a[][],boolean b[][]){
+		
+		for(int i=0;i<a.length;++i){
+			for(int j=0;j<a[i].length;++j){
+				int n=0;
+				
+				if(a[(i-1+a.length) % (a.length)][j] == true)
+					++n;
+				
+				if(a[i][(j-1+a[i].length) % (a[i].length)] == true)
+					++n;
+				
+				if(a[(i+1+a.length) % a.length][j] == true)
+					++n;
+				
+				if(a[i][(j+1+a[i].length) % a[i].length] == true)
+					++n;
+				
+				if(a[(i-1+a.length) % (a.length)][(j-1+a[i].length) % (a[i].length)] == true)
+					++n;
+				
+				if(a[(i+1+a.length) % (a.length)][(j-1+a[i].length) % (a[i].length)] == true)
+					++n;
+					
+				if(a[(i-1+a.length) % (a.length)][(j+1+a[i].length) % (a[i].length)] == true)
+					++n;
+					
+				if(a[(i+1+a.length) % (a.length)][(j+1+a[i].length) % (a[i].length)] == true)
+					++n;
+			
+				
+				if(n > 3 || n < 2){
+					b[i][j]=false;
+				}
+				if(a[i][j]==true){
+					if(n == 2 || n == 3){
+						b[i][j]=true;
+					}
+				}else{
+					if(n == 3){
+						b[i][j]=true;
+					}
+				}			
+			}
+		}
+
+		for(int i = 0;i<a.length;++i){
+			for(int j = 0; j<a[i].length;++j){
+				a[i][j]=b[i][j];
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		int z=5,
+			s=11;
+		boolean[][]a=new boolean[z][s];
+		boolean[][]b=new boolean[z][s];
+			
+		Init(a);
+		Ausgabe(a);
+		Neuberechnung(a,b);
+		Ausgabe(a);
+		Neuberechnung(a,b);
+		Ausgabe(a);
+		Neuberechnung(a,b);
+		Ausgabe(a);
+		Neuberechnung(a,b);
+		Ausgabe(a);
+		Neuberechnung(a,b);
+		
+		
+	}
+}
