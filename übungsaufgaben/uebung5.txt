@@ -1,0 +1,10 @@
+Stellen Sie Ihr Life Programm auf die for-Schleife um. Verwenden Sie für den Schleifenabbruch die .lentgh Information des Arrays.  
+
+Nach Ausgabe des Arrays berechnen Sie ein neues boolsches Array der gleichen Größe. Die Regeln,wann eine Zelle auf true gesetzt wird,lauten wie folgt:
+ * ist die Zelle true und in der Nachbarschaft gibt es 2 oder 3 Zellen mit true,bleibt die Zelle true
+ * ist die Zelle false und in der Nachbarschaft gibt es 3 Zellen mit true ,wird die Zelle true
+ * gibt es mehr als 3 oder weniger als 2 true in der Nachbarschaft, wird die Zelle mit false besetzt 
+ 
+Dabei bilden die Zellen,die in einem Schritt über,unter,neben und diagonal der untersuchten Zelle liegen,die Nachbarschaft.
+Somit haben die mittleren Zellen 8 Nachbarn,die Randzellen weniger.
+Geben Sie das neue Array aus.
