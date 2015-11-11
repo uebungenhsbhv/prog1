@@ -1,0 +1,10 @@
+tellen Sie ihr Life Programm auf Methoden um.
+Die Initialisierung, Ausgabe und Neuberechnung soll jeweils durch eine Methode erfolgen.
+
+Verändern Sie die Definition für die Nachbarschaft. 
+Jetzt sollen auch die Zellen am Rand und in den Ecken jeweils 8 Nachbarn haben. 
+Dazu hat der linke Rand als linken Nachbarn den ganz rechten Rand, die oberen Zellen als oberen Nachbarn die ganz unteren Zellen usw.
+
+D.h. geht man oben aus dem Feld hinaus , kommt man unten wieder hinein, geht man links heraus, kommt man rechts wieder hinein.
+
+Führen Sie die Neuberechnung und Ausgabe immer wieder durch. 
