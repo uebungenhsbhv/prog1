@@ -1,0 +1,139 @@
+//Julia
+class feld {
+	int [][] a;
+	
+	public void init(int z, int s){
+		a = new int[z][s];
+		for(int i = 0; i < a.length;++i){
+			for(int j = 0; j < a[i].length;++j){
+				if(Math.random()<=0.5){
+					a[i][j] = 1;
+				}	
+			}
+		}
+	}
+	
+	public void ausgabe(){
+		for(int i = 0; i < a.length;++i){
+			for(int j = 0; j < a[i].length;++j){
+				if(a[i][j] == 0){
+					System.out.print(" ");
+				}if(a[i][j] == 1){
+					System.out.print(".");
+				}if(a[i][j] == 2){
+					System.out.print("o");
+				}if(a[i][j] == 3){
+					System.out.print("O");
+				}if(a[i][j] > 3){
+					System.out.print("*");
+				}
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+	
+	public void neuberechnung(){
+
+		for(int i=0;i<a.length;++i){
+			for(int j=0;j<a[i].length;++j){
+				
+				if((a[i][j] > 0) && (nachbarnzaehlen(i,j) == 2 || nachbarnzaehlen(i,j) == 3)){
+					a[i][j] += 1;
+				}else if((a[i][j] == 0) && nachbarnzaehlen(i,j) == 3){
+					a[i][j] += 1;
+				} if(nachbarnzaehlen(i,j) > 3 || nachbarnzaehlen(i,j) < 2){
+					a[i][j] = 0;
+				}			
+			}
+		}
+	}
+	
+	public int nachbarnzaehlen(int i, int j){
+		int n = 0;
+		
+			if(a[(i-1+a.length) % (a.length)][j] > 0)
+				++n;
+	
+			if(a[i][(j-1+a[i].length) % (a[i].length)] > 0)
+				++n;
+	
+			if(a[(i+1+a.length) % a.length][j] > 0)
+				++n;
+	
+			if(a[i][(j+1+a[i].length) % a[i].length] > 0)
+				++n;
+			
+			if(a[(i-1+a.length) % (a.length)][(j-1+a[i].length) % (a[i].length)] > 0)
+				++n;
+	
+			if(a[(i+1+a.length) % (a.length)][(j-1+a[i].length) % (a[i].length)] > 0)
+				++n;
+		
+			if(a[(i-1+a.length) % (a.length)][(j+1+a[i].length) % (a[i].length)] > 0)
+				++n;
+			
+			if(a[(i+1+a.length) % (a.length)][(j+1+a[i].length) % (a[i].length)] > 0)
+				++n;
+				
+				
+		return n;
+	}
+	
+	public int anzahlx(int x,int i, int j, int anzahl){
+		if(i < a.length && j < a[i].length){
+			if(nachbarnzaehlen(i,j) == x){
+				++anzahl;
+			}
+			return anzahlx(x,i,j+1,anzahl);
+		}else if(i < a.length)
+			return anzahlx(x,i+1,0,anzahl);
+		else
+			return anzahl;		
+	}
+	
+	public int[][] befuelleArray(int x, int i, int j,int k, int [][]koordinaten){
+		if(i < a.length && j < a[i].length){
+			if(nachbarnzaehlen(i,j) == x){
+				koordinaten[k][0] = i;
+				koordinaten[k][1] = j;
+				++k;
+			}
+			return befuelleArray(x,i,j+1,k,koordinaten);
+		}else if(i < a.length)
+			return befuelleArray(x,i+1,0,k,koordinaten);
+		else
+			return koordinaten;
+	}
+	
+	public void ausgabe_koordinaten(int [][] koordinaten){
+		for(int i = 0; i < koordinaten.length;++i){
+			for(int j = 0; j < koordinaten[i].length;++j){
+				System.out.print(koordinaten[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}	
+}
+
+public class life {
+
+	public static void main(String[] args) {
+		int x = 2;
+		int stopp = 0;
+		
+		feld a = new feld();
+		a.init(5,10);
+		
+		int[][] koordinaten = new int[a.anzahlx(x,0,0,0)][2];
+		
+		while(stopp < 10){
+			a.ausgabe();
+			koordinaten = new int[a.anzahlx(x,0,0,0)][2];
+			a.ausgabe_koordinaten(a.befuelleArray(x,0,0,0,koordinaten));
+			a.neuberechnung();
+			++stopp;
+		}
+	}
+}
